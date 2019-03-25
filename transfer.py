@@ -13,7 +13,7 @@ while 1 :
     ch = "bonjour"
     
    #"""
-    if ch[0]=="T"
+    if ch[0]=="T":  
         # SQL Temperature
         print(ch[5:7])
         print("t")

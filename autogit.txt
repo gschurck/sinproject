@@ -1,0 +1,6 @@
+cd Documents/sinproject
+git status
+git add Arduino/
+git add transfer.py
+git commit -m "autogit"
+git push
