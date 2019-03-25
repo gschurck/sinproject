@@ -10,7 +10,10 @@ while 1 :
     #print(ser.readline())#python 2.7.15
     ch = ser.readline()
     #print(ch)
-    if ch[0]=="T":
+    
+    
+   """ 
+   if ch[0]=="T":
             # SQL Temperature
             print(ch[5:7])
             print("t")
@@ -22,4 +25,4 @@ while 1 :
             # SQL Humidity
             print(ch[5:7])
             print("b")
-            
+    """       
