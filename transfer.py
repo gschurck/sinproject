@@ -8,21 +8,21 @@ import serial
 ser = serial.Serial('/dev/ttyACM0', 9600)
 while 1 :
     #print(ser.readline())#python 2.7.15
-    ch = ser.readline()
+    #ch = ser.readline()
     #print(ch)
+    ch = "bonjour"
     
-    
-   """ 
-   if ch[0]=="T":
-            # SQL Temperature
-            print(ch[5:7])
-            print("t")
+   #"""
+    if ch[0]=="T"
+        # SQL Temperature
+        print(ch[5:7])
+        print("t")
     elif ch[0]=="H":
-            # SQL Humidity
-            print(ch[5:7])
-            print("h")
+        # SQL Humidity
+        print(ch[5:7])
+        print("h")
     elif ch[0]=="b":
-            # SQL Humidity
-            print(ch[5:7])
-            print("b")
-    """       
+        # SQL Humidity
+        print(ch[5:7])
+        print("b")
+    #"""       
