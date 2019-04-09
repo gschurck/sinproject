@@ -15,20 +15,34 @@ while 1 :
     while 1 :
         print(ser.readline())#python 2.7.15
         ch = ser.readline()
-        print(ch[14:16])
-        H=(ch[14:16])
-    
-    #b=int.from.bytes(b'\ 27')
-    #print(bytes([27]))
-    print("H=", H)
-    #S=H+2
-    print("H")
+        H=(ch[4:6])
+        if ch[0:1] == b'T':
+            T=ch[5:7]
+            print(T)
+            Tint = int(T)
+            type(Tint)
+            # <class 'int'>
+            print(Tint)
+
+        elif ch[0:1] == b'H':
+            H=ch[4:6]
+            print(H)
+            Hint = int(H)
+            type(Hint)
+            # <class 'int'>
+            print(Hint)
+        
+"""
+
+y = int(x)
+type(y)
+
+# <class 'int'>
+"""
 
 
-    # <class 'int'>
-
     
-    
+"""   
     mydb = mysql.connector.connect(host='localhost',
                              database='arduino',
                              user='root',
@@ -41,10 +55,7 @@ while 1 :
     sql = "INSERT INTO valeurs (temperature, humidity) VALUES (%s, %s)"
 
     val = [
-      ('0', y),
-      ('20', y),
-      ('80', y),
-     
+      (Tint, Hint)
     ]
 
     mycursor.executemany(sql, val)
@@ -53,9 +64,8 @@ while 1 :
 
     print(mycursor.rowcount, "was inserted.")
 
-
-
     """
+"""
     x = b'27'
 
     y = int(x.decode()) # decode is a method on the bytes class that returns a string
@@ -63,7 +73,6 @@ while 1 :
     # <class 'int'>
 
 ######################################
-
     y = int(b'27')
     type(y)
     # <class 'int'>
