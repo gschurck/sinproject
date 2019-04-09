@@ -21,6 +21,10 @@ while 1 :
     print("H")
     print(int.from_bytes(b'\x27', "big", signed=True))
 
+    y = int(H.decode()) # decode is a method on the bytes class that returns a string
+    type(y)
+    print(y)
+    # <class 'int'>
     """
     x = b'27'
 
