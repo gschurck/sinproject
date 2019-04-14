@@ -1,4 +1,5 @@
 import mysql.connector
+import time
 
 mydb = mysql.connector.connect(host='localhost',
                          database='arduino',
@@ -9,16 +10,17 @@ mycursor = mydb.cursor()
 
 Tint=0
 Hint=2
-sql = "ALTER TABLE valeurs ADD timelog DATETIME()"
 
-mydb.commit()
+localtime = time.asctime( time.localtime(time.time()) )
+
 while 1:
-    # sql = "INSERT INTO valeurs (temperature, humidity) VALUES (%s, %s)"
+    localtime = time.asctime( time.localtime(time.time()) )
+    sql = "INSERT INTO valeurs (temperature, humidity, time) VALUES (%s, %s, %s)"
     
     
-    """
+
     val = [
-      (Tint, Hint)
+      (Tint, Hint , localtime)
     ]
 
     mycursor.executemany(sql, val)
@@ -28,4 +30,3 @@ while 1:
     print(mycursor.rowcount, "was inserted.")
     Tint += 2
     Hint += 2
-    """
