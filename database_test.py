@@ -28,7 +28,7 @@ while 1:
     print(mycursor.rowcount, "was inserted.")
     Tint += 2
     Hint += 2
-    
+    time.sleep(1)
     
 """
 

@@ -6,24 +6,46 @@
 $conn = mysqli_connect ('localhost', 'root', 'password', 'arduino');
 ?>
 <html>
-<head>
-<title>Musée</title>
-</head>
-<body>
-Ceci est une base de données : </br>
-<?php
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Musée</title>
+	</head>
+	<body>
+		<!--
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">The table header</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>The table body
+					
+					</td>
+					<td>with two columns</td>
+				</tr>
+			</tbody>
+		</table>
+		-->
+		</br>
+		<b>Température (°C) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Humidité (%) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Timelog  </b>
+		</br>
+		
+		<?php
 
-$resultat = mysqli_query($conn, 'SELECT * FROM valeurs ORDER BY time DESC LIMIT 1');
+		$resultat = mysqli_query($conn, 'SELECT * FROM valeurs ORDER BY id DESC LIMIT 0,5');
 
-while($donnees = mysqli_fetch_assoc($resultat))
-{
-	echo $donnees['temperature'];
-	echo "\n";
-	echo $donnees['time'];
-	echo "\n"; 
-	
-}
-?>
-
-</body>
+		while($donnees = mysqli_fetch_assoc($resultat))
+		{
+			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+			echo $donnees['temperature'];
+			echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			echo $donnees['humidity'];
+			echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			echo $donnees['time'];
+			echo "</br>";
+		}
+		?>
+	</body>
 </html>
