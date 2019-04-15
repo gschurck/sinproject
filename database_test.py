@@ -15,18 +15,24 @@ localtime = time.asctime( time.localtime(time.time()) )
 
 while 1:
     localtime = time.asctime( time.localtime(time.time()) )
-    sql = "INSERT INTO valeurs (temperature, humidity, time) VALUES (%s, %s, %s)"
+    print(localtime)
+    sql = "INSERT INTO valeurs (temperature, humidity, time) VALUES (%s, %s, %s);"
     
-    
+    val = (Tint, Hint , localtime)
 
-    val = [
-      (Tint, Hint , localtime)
-    ]
 
-    mycursor.executemany(sql, val)
+    mycursor.execute(sql, val)
 
     mydb.commit()
 
     print(mycursor.rowcount, "was inserted.")
     Tint += 2
     Hint += 2
+    
+    
+"""
+
+    val = [
+      (Tint, Hint , localtime)
+    ]
+"""

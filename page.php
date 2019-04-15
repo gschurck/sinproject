@@ -13,17 +13,15 @@ $conn = mysqli_connect ('localhost', 'root', 'password', 'arduino');
 Ceci est une base de données : </br>
 <?php
 
-$resultat = mysqli_query($conn, 'SELECT temperature FROM valeurs LIMIT 0, 30');
+$resultat = mysqli_query($conn, 'SELECT * FROM valeurs ORDER BY time DESC LIMIT 1');
 
 while($donnees = mysqli_fetch_assoc($resultat))
 {
-	
-	echo "\n";
 	echo $donnees['temperature'];
 	echo "\n";
 	echo $donnees['time'];
 	echo "\n"; 
-	$resultat = mysqli_query($conn, 'SELECT time FROM valeurs ORDER BY valeurs.time ASC LIMIT 1');
+	
 }
 ?>
 
