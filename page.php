@@ -47,5 +47,8 @@ $conn = mysqli_connect ('localhost', 'root', 'password', 'arduino');
 			echo "</br>";
 		}
 		?>
+		</br>
+		<img src="image01.jpg" width="50%" height="50%">
+		
 	</body>
 </html>
