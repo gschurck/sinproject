@@ -33,27 +33,27 @@ $conn = mysqli_connect ('localhost', 'root', 'password', 'arduino');
 		<pre><b>                                                                                       Température (°C)       Humidité (%)         Timelog  </b></pre>
 		</br>
 		<center>
-		<?php
+			<?php
 
-		$resultat = mysqli_query($conn, 'SELECT * FROM valeurs ORDER BY id DESC LIMIT 0,5');
+			$resultat = mysqli_query($conn, 'SELECT * FROM valeurs ORDER BY id DESC LIMIT 0,5');
 
-		while($donnees = mysqli_fetch_assoc($resultat))
-		{
-			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $donnees['temperature'];
-			echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $donnees['humidity'];
-			echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $donnees['time'];
-			echo "</br>";
-		}
-		?>
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>
-		<img src="image01.jpg" width="50%" height="50%">
-		<center>
+			while($donnees = mysqli_fetch_assoc($resultat))
+			{
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo $donnees['temperature'];
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo $donnees['humidity'];
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				echo $donnees['time'];
+				echo "</br>";
+			}
+			?>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			<img src="image.jpg" width="50%" height="50%">
+		</center>
 	</body>
 </html>

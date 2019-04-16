@@ -76,4 +76,10 @@ type(y)
     y = int(b'27')
     type(y)
     # <class 'int'>
-    """
+"""
+
+import os
+import shutil
+
+os.rename("home/pi/image.jpg", "/var/www/html/image.jpg")
+shutil.move("home/pi/image.jpg", "/var/www/html/image.jpg")
