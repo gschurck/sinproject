@@ -1,0 +1,1 @@
+sudo scp ~image01.jpg pi@192.168.0.101:/home/pi
