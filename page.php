@@ -29,9 +29,10 @@ $conn = mysqli_connect ('localhost', 'root', 'password', 'arduino');
 		</table>
 		-->
 		</br>
-		<b>Température (°C) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Humidité (%) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Timelog  </b>
 		</br>
-		
+		<pre><b>                                                                                       Température (°C)       Humidité (%)         Timelog  </b></pre>
+		</br>
+		<center>
 		<?php
 
 		$resultat = mysqli_query($conn, 'SELECT * FROM valeurs ORDER BY id DESC LIMIT 0,5');
@@ -48,7 +49,11 @@ $conn = mysqli_connect ('localhost', 'root', 'password', 'arduino');
 		}
 		?>
 		</br>
+		</br>
+		</br>
+		</br>
+		</br>
 		<img src="image01.jpg" width="50%" height="50%">
-		
+		<center>
 	</body>
 </html>
