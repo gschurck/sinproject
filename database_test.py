@@ -31,7 +31,7 @@ while 1:
     Tint += 2
     Hint 
     time.sleep(1)
-    Tint = randint(22,24)
+    Tint = randint(26,28)
     Hint = randint(30,35)
 """
 
