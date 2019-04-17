@@ -1,5 +1,7 @@
 import mysql.connector
 import time
+from random import *
+
 
 mydb = mysql.connector.connect(host='localhost',
                          database='arduino',
@@ -8,8 +10,8 @@ mydb = mysql.connector.connect(host='localhost',
 
 mycursor = mydb.cursor()
 
-Tint=0
-Hint=2
+Tint=24
+Hint=30
 
 localtime = time.asctime( time.localtime(time.time()) )
 
@@ -27,9 +29,10 @@ while 1:
 
     print(mycursor.rowcount, "was inserted.")
     Tint += 2
-    Hint += 2
+    Hint 
     time.sleep(1)
-    
+    Tint = randint(22,24)
+    Hint = randint(30,35)
 """
 
     val = [
