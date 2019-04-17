@@ -6,3 +6,5 @@ arp -a
 
 chmod +x script-name-here.sh
 sh script-name-here.sh
+
+sudo scp image.jpg pi@192.168.43.13:/home/pi

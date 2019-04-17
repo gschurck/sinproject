@@ -27,7 +27,7 @@ while 1 :
         elif ch[0:1] == b'H':
             H=ch[4:6]
             print(H)
-            Hint = int(H)
+            Hint = float(H)
             type(Hint)
             # <class 'int'>
             print(Hint)

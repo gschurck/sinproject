@@ -18,7 +18,7 @@ while 1:
     print(localtime)
     sql = "INSERT INTO valeurs (temperature, humidity, time) VALUES (%s, %s, %s);"
     
-    val = (Tint, Hint , localtime)
+    val = (Tint, Hint, localtime)
 
 
     mycursor.execute(sql, val)
